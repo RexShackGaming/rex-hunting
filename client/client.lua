@@ -43,7 +43,7 @@ CreateThread(function()
                                     rewarditem5
                                 })
                                 Wait(1000)
-                                if Config.Animals[i].skinable then
+                                if Config.Animals[i].skinable and Config.DeleteCarcass then
                                     DeletePed(pedGathered)
                                 end
                                 break

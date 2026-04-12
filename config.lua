@@ -1,5 +1,13 @@
 Config = {}
 
+----------------------------------
+-- general settings
+Config.DeleteCarcass = true -- this will ensure the carcass is removed if true
+----------------------------------
+
+----------------------------------
+-- animal settings
+----------------------------------
 Config.Animals = {
 
     -- animals

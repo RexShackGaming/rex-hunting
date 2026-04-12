@@ -22,7 +22,7 @@ CreateThread(function()
                     local playergate = playerPed == ped
                     -- process animal
                     for i = 1, #Config.Animals do
-						if model and Config.Animals ~= nil and playergate and bool_unk == 1 then
+                        if model and Config.Animals ~= nil and playergate and bool_unk == 1 then
                             local chosenmodel = Config.Animals[i].modelhash
                             if model == chosenmodel then
                                 local rewarditem1 = Config.Animals[i].rewarditem1
@@ -30,22 +30,25 @@ CreateThread(function()
                                 local rewarditem3 = Config.Animals[i].rewarditem3
                                 local rewarditem4 = Config.Animals[i].rewarditem4
                                 local rewarditem5 = Config.Animals[i].rewarditem5
-								Wait(1000)
-								DeletePed(pedGathered)
-								Wait(1000)
-								local holding = Citizen.InvokeNative(0xD806CD2A4F2C2996, cache.ped)
-								Wait(1000)
-								DeleteEntity(holding)
-								TriggerServerEvent('rex-hunting:server:giverewards', {
-									rewarditem1,
-									rewarditem2,
-									rewarditem3,
-									rewarditem4,
-									rewarditem5
-								})
-								break
-							end
-						end
+                                Wait(1000)
+                                local holding = Citizen.InvokeNative(0xD806CD2A4F2C2996, cache.ped)
+                                if holding then
+                                    DeleteEntity(holding)
+                                end
+                                TriggerServerEvent('rex-hunting:server:giverewards', {
+                                    rewarditem1,
+                                    rewarditem2,
+                                    rewarditem3,
+                                    rewarditem4,
+                                    rewarditem5
+                                })
+                                Wait(1000)
+                                if Config.Animals[i].skinable then
+                                    DeletePed(pedGathered)
+                                end
+                                break
+                            end
+                        end
                     end
                 end
             end

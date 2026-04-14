@@ -3,7 +3,389 @@ Config = {}
 ----------------------------------
 -- general settings
 Config.DeleteCarcass = true -- this will ensure the carcass is removed if true
+Config.Image = 'rsg-inventory/html/images/' -- locaion where your images are stored
 ----------------------------------
+
+----------------------------------
+-- vendor settings
+----------------------------------
+Config.Vendors = {
+    { -- valentine trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-333.9737, 773.49157, 116.22194, 111.8759),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- stdenis trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(2832.3193, -1223.699, 47.654289, 190.36814),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- riggs station trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-1007.607, -549.5084, 99.39138, 282.4226),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- west elizabeth trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-2844.197, 142.13876, 184.61907, 255.25524),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- stawberry trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-1745.992, -388.9831, 156.59568, 107.79673),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- tumbleweed trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-5511.721, -2951.048, -1.83548, 165.87483),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- grifflies trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(1421.22, 389.69, 89.74, 249.13),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- roanake trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(2541.54, 809.94, 75.98, 98.15),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- ambario trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-1632.52, 1235.91, 351.87, 165.18),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- corngual trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(497.70, 579.54, 110.20, 359.00),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- heartlands trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-127.70, -24.34, 96.08, 104.95),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- manzanita trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-1981.30, -1650.31, 117.09, 130.13),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- kamassa river trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(1878.37, -1854.60, 42.76, 25.18),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- rio bravo trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-4621.31, -3366.02, 21.97, 226.17),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+    { -- spider gorge trader
+        pedModel = 'mp_u_m_m_trader_01',
+        coords = vector4(-1340.77, 2437.74, 308.18, 177.71),
+        items = {
+            -- Skins & Pelts
+            { name = 'resource_skin_alligator', label = 'Alligator Skin', buyPrice = 15, sellPrice = 8,  initialStock = 5,  maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_bear',      label = 'Bear Skin',      buyPrice = 20, sellPrice = 12, initialStock = 3,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_wolf',      label = 'Wolf Pelt',      buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_deer',      label = 'Deer Skin',      buyPrice = 10, sellPrice = 5,  initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_rabbit',    label = 'Rabbit Pelt',    buyPrice = 5,  sellPrice = 2,  initialStock = 20, maxStock = 80, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_pelt_fox',       label = 'Fox Pelt',       buyPrice = 12, sellPrice = 6,  initialStock = 10, maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_cougar',    label = 'Cougar Skin',    buyPrice = 18, sellPrice = 10, initialStock = 5,  maxStock = 30, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar',      label = 'Boar Skin',      buyPrice = 14, sellPrice = 7,  initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Other hunting items
+            { name = 'resource_antler_buck',  label = 'Buck Antler',  buyPrice = 8,  sellPrice = 4, initialStock = 10, maxStock = 50, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_horn_buffalo', label = 'Buffalo Horn', buyPrice = 10, sellPrice = 5, initialStock = 8,  maxStock = 40, canBuy = true, canSell = true, stockBasedPrice = true },
+            { name = 'resource_tooth_wolf',   label = 'Wolf Tooth',   buyPrice = 6,  sellPrice = 3, initialStock = 15, maxStock = 60, canBuy = true, canSell = true, stockBasedPrice = true },
+
+            -- Legendary items (vendor won't sell these, only buy)
+            { name = 'resource_skin_alligator_legendary', label = 'Legendary Alligator Skin', buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_boar_legendary',      label = 'Legendary Boar Skin',      buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+            { name = 'resource_skin_buffalo_legendary',   label = 'Legendary Buffalo Skin',   buyPrice = 100, sellPrice = 75, initialStock = 0, maxStock = 10, canBuy = false, canSell = true, stockBasedPrice = true },
+        }
+    },
+}
 
 ----------------------------------
 -- animal settings

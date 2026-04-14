@@ -3,7 +3,7 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 game 'rdr3'
 
 description 'rex-hunting'
-version '2.0.2'
+version '2.0.3'
 
 shared_scripts {
     '@ox_lib/init.lua',
@@ -12,11 +12,13 @@ shared_scripts {
 
 client_scripts {
     'client/client.lua',
+    'client/vendor.lua',
     'client/main.js'
 }
 
 server_scripts {
     'server/server.lua',
+    'server/vendor.lua',
     'server/versionchecker.lua'
 }
 
